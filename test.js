@@ -58,16 +58,38 @@
 
 // # Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built into Ruby.
 
-var array = [4, 5, 6, 7, 8, 9];
-var index = array.length;
-var revarray = [];
+// var array = [4, 5, 6, 7, 8, 9];
+// var index = array.length;
+// var revarray = [];
 
-function reverse(number) {
-  while (index > 0) {
-    index--;
-    revarray.push(array[index]);
+// function reverse(number) {
+//   while (index > 0) {
+//     index--;
+//     revarray.push(array[index]);
+//   }
+//   console.log(revarray);
+// }
+
+// reverse();
+
+// # Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from the first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+
+var array1 = [1, 5, 10];
+var array2 = [100, 500, 1000];
+var resultArray = [];
+var index1 = 0;
+var index2 = 0;
+
+function doMath(numbers) {
+  while (index2 < array2.length) {
+    while (index1 < array1.length) {
+      resultArray.push(array1[index1] + array2[index2]);
+      index1++;
+    }
+    index1 = 0;
+    index2++;
   }
-  console.log(revarray);
+  console.log(resultArray);
 }
 
-reverse();
+doMath();
