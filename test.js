@@ -41,17 +41,33 @@
 
 // # Write a method that accepts a number and returns its factorial. For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
 
-var number = 5;
-var number2 = 0;
-var result = number;
+// var number = 5;
+// var number2 = 0;
+// var result = number;
 
-function doMath() {
-  while (number > 1) {
-    number2 = number - 1;
-    result = number2 * result;
-    number -= 1;
+// function doMath() {
+//   while (number > 1) {
+//     number2 = number - 1;
+//     result = number2 * result;
+//     number -= 1;
+//   }
+//   console.log(result);
+// }
+
+// doMath();
+
+// # Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built into Ruby.
+
+var array = [4, 5, 6, 7, 8, 9];
+var index = array.length;
+var revarray = [];
+
+function reverse(number) {
+  while (index > 0) {
+    index--;
+    revarray.push(array[index]);
   }
-  console.log(result);
+  console.log(revarray);
 }
 
-doMath();
+reverse();
